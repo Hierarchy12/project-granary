@@ -58,5 +58,5 @@ hourly_data["wind_gusts_10m"] = hourly_wind_gusts_10m
 hourly_data["precipitation_probability"] = hourly_precipitation_probability
 
 hourly_dataframe = pd.DataFrame(data = hourly_data)
-hourly_dataframe.to_csv("C:\\Users\\gavin\\Desktop\\project_granary_data.csv", index = False)
+hourly_dataframe.to_csv("project_granary_data.csv", index = False)
 # print("\nDaily data\n", daily_dataframe)
