@@ -1,2 +1,15 @@
 # project-granary
-A student-led, hyperlocal, currently personal weather-data project inspired by the farming community of Narra, Palawan, Philippines.
+A student-led, hyperlocal, currently personal weather-data project that aims to predict future conditions based on current observations from weather stations.
+
+Project purpose: to study how data from personal weather stations can contribute to hyperlocal weather predictions to improve forecasting in local areas alongside machine-learning models
+
+Progress as of 2026-7-26:
+Sainlogic weather station purchased and en route
+Imported historical baseline data from Open-Meteo
+Experimental dataset implementation with matplotlib, pandas, and numpy
+
+Upcoming:
+Writing code and training machine learning model using historical and current data
+
+Note:
+Project Granary is a research project for personal educational uses only, and is not currently configured to provide meteorological or agricultural advice.
