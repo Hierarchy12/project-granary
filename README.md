@@ -1,7 +1,7 @@
 # project-granary
 A student-led, hyperlocal, currently personal weather-data project that aims to predict future conditions based on current observations from weather stations.
 
-Project purpose: to study how data from personal weather stations can contribute to hyperlocal weather predictions to improve forecasting in local areas alongside machine-learning models
+Project purpose: to study how data from personal weather stations can contribute to hyperlocal weather predictions to improve forecasting in local areas alongside machine-learning models, particularly planned around underserved farming communities in rural areas currently lacking access to accurate weather data provided by geographically close observation stations
 
 Progress as of 2026-7-26:
 Sainlogic weather station purchased and en route
