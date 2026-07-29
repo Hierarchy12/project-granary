@@ -11,4 +11,4 @@ Installed new weather station on temporary framework (Note: on old weather stati
 2026-7-28:
 
 Connected weather station transmitter data to weatherseed app and Weather Underground app
-Connected WU data to Project Granary main .csv file via Python script
+Connected WU data to Project Granary main .csv file via Python script (Note: weather station can't relay pressure data, would have to use pressure data from nearby station)
