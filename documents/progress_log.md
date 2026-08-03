@@ -32,4 +32,4 @@ Setting up the training data to include arrays for past 5 hours as input and an 
 
 2026-8-3:
 
-Transitioned to VAR regression-based model after operational conflicts with the XGBoost model
+Transitioned to VAR regression-based model after operational conflicts with the ARIMAX model
