@@ -22,4 +22,10 @@ Began setting up permanent weather station site with 4x4, tall support structure
 Began setting up the permanent weather station base (including 4x4 wooden base and concrete floor to secure the station)
 
 2026-7-31:
+
 Successfully integrated weather station with the base
+
+2026-8-1 & 8-2:
+
+Working on XGBoost multi:softmax model to construct a basic forecast system
+Setting up the training data to include arrays for past 5 hours as input and an array representing the next 5 hours for output
