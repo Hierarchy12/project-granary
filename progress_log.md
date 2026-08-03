@@ -31,4 +31,5 @@ Working on XGBoost multi:softmax model to construct a basic forecast system
 Setting up the training data to include arrays for past 5 hours as input and an array representing the next 5 hours for output
 
 2026-8-3:
+
 Transitioned to VAR regression-based model after operational conflicts with the XGBoost model
