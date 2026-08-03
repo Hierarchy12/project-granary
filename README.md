@@ -8,7 +8,7 @@ Sainlogic weather station purchased and en route
 Imported historical baseline data from Open-Meteo
 Experimental dataset implementation with matplotlib, pandas, and numpy
 
-Upcoming:
+Roadmap:
 Writing code and training machine learning model using historical and current data
 
 Note:
