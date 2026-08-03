@@ -13,3 +13,5 @@ Writing code and training machine learning model using historical and current da
 
 Note:
 Project Granary is a research project for personal educational uses only, and is not currently configured to provide meteorological or agricultural advice.
+
+![Weather Station](images/IMG_6148.jpeg)
