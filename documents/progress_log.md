@@ -37,3 +37,6 @@ Transitioned to VAR regression-based model after operational conflicts with the 
 2026-8-4:
 
 Finished ARIMAX model implementation
+
+2026-8-5 - 8-7:
+Currently offsite, gathering data
