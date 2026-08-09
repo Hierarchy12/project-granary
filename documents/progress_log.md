@@ -40,3 +40,6 @@ Finished ARIMAX model implementation
 
 2026-8-5 - 8-7:
 Currently offsite, gathering data
+
+2026-8-8:
+Implemented fix to error in weather data gathering repeats
