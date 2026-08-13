@@ -45,3 +45,11 @@ Currently offsite, running script to gather data each day
 2026-8-8:
 
 Implemented fix to error in weather data gathering repeats
+
+2026-8-9 - 8-12:
+
+Currently offsite, running script to gather data each day
+
+2026-8-13:
+
+Fixed a problem with inconsistent timestamp formatting
