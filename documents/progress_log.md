@@ -53,3 +53,7 @@ Currently offsite, running script to gather data each day
 2026-8-13:
 
 Fixed a problem with inconsistent timestamp formatting
+
+2026-8-14:
+
+Testing datetime indexing framework
