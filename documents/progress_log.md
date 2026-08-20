@@ -53,3 +53,7 @@ Fixed a problem with inconsistent timestamp formatting
 2026-8-14:
 
 Testing datetime indexing
+
+2026-8-15 - 8-20:
+
+Gathered data, writing code for matplotlib script for data visualization
