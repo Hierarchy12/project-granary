@@ -1,17 +1,9 @@
 import pandas as pd
 import numpy as np
-import itertools
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 
-df = pd.read_csv('project_granary_data.csv')
-
-p = range(0, 4)
-d = range(0, 3)
-q = range(0, 4)
-pdq = list(itertools.product(p, d, q))
-best_aic = np.inf
-best_order = None
-best_model = None
+df = pd.read_csv("project_granary_data.csv") # Dataset
+fs = 24  # Forecast steps
 
 def fit_arimax(data, order=(1, 1, 1), endog_cols=None, exog_cols=None, forecast_steps=24):
     # Prepare the endogenous and exogenous variables
@@ -29,7 +21,9 @@ def fit_arimax(data, order=(1, 1, 1), endog_cols=None, exog_cols=None, forecast_
 
     return model_fit, forecast_mean, forecast_conf_int
 
-model_fit, forecast_mean, forecast_conf_int = fit_arimax(df, order=(3, 1, 3), endog_cols=['precipitation_probability'], exog_cols=['temperature_2m', 'relative_humidity_2m', 'surface_pressure', 'wind_speed_10m', 'wind_direction_10m', 'wind_gusts_10m'], forecast_steps=24)
+# (3, 1, 3) order is chosen based on the AIC/BIC values and model diagnostics
+model_fit, forecast_mean, forecast_conf_int = fit_arimax(df, order=(3, 1, 3), endog_cols=["precipitation_probability"], exog_cols=["temperature_2m", "relative_humidity_2m", "surface_pressure", "wind_speed_10m", "wind_direction_10m", "wind_gusts_10m"], forecast_steps=fs)
+forecast_index = pd.date_range(start=pd.to_datetime(df.iat[-1, 0]) + pd.Timedelta(1, unit="h"), periods=fs, freq="h")
 
 print("ARIMAX Model Summary:")
 print(model_fit.summary())
@@ -37,3 +31,5 @@ print("\nForecasted Values:")
 print(forecast_mean)
 print("\nForecast Confidence Intervals:")
 print(forecast_conf_int)
+print("\nForecast Index:")
+print(forecast_index)
