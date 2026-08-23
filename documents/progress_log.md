@@ -57,3 +57,11 @@ Testing datetime indexing
 2026-8-15 - 8-20:
 
 Gathered data, writing code for matplotlib script for data visualization
+
+2026-8-21:
+
+Finished matplotlib plotting implementation - all model runs now include graphs of predictions
+
+2026-8-22 - 8-23:
+
+Gathering data, writing code for potential secondary XGBoost implementation
