@@ -62,6 +62,6 @@ Gathered data, writing code for matplotlib script for data visualization
 
 Finished matplotlib plotting implementation - all model runs now include graphs of predictions
 
-2026-8-22 - 8-25:
+2026-8-22 - 8-30:
 
-Gathering data, writing code for potential secondary XGBoost implementation
+Gathering data, writing code for potential secondary XGBoost implementation (Note: raising an invalid label shape error)
