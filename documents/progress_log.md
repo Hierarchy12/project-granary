@@ -70,3 +70,7 @@ Gathering data, writing code for potential secondary XGBoost implementation (Not
 2026-9-6:
 
 Finished XGBoost implementation (Note: notable weather pattern occurred: weathet conditions caused the model and other forecasts to predict upcoming rain, all failed, likely cause being random noise)
+
+2026-9-7 - 9-12:
+
+Optimizing XGBoost model (Note: model is inefficient in data collecting, will fix soon)
