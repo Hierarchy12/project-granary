@@ -71,6 +71,10 @@ Gathering data, writing code for potential secondary XGBoost implementation (Not
 
 Finished XGBoost implementation (Note: notable weather pattern occurred: weathet conditions caused the model and other forecasts to predict upcoming rain, all failed, likely cause being random noise)
 
-2026-9-7 - 9-12:
+2026-9-7 - 9-20:
 
 Optimizing XGBoost model (Note: model is inefficient in data collecting, will fix soon)
+
+2026-9-21:
+
+Updated XGBoost model for matplotlib support
