@@ -75,6 +75,6 @@ Finished XGBoost implementation (Note: notable weather pattern occurred: weathet
 
 Optimizing XGBoost model (Note: model is inefficient in data collecting, will fix soon)
 
-2026-9-21:
+2026-9-21 - 10-2:
 
-Updated XGBoost model for matplotlib support
+Updated XGBoost model for matplotlib support and moving prediction to precipitation (Note: currently raising value errors, will need to fix)
