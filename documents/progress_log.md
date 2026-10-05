@@ -78,3 +78,11 @@ Optimizing XGBoost model (Note: model is inefficient in data collecting, will fi
 2026-9-21 - 10-2:
 
 Updated XGBoost model for matplotlib support and moving prediction to precipitation (Note: currently raising value errors, will need to fix)
+
+2026-10-3 - 10-4:
+
+Successfully moved prediction to observed participation, using Open-Meteo for historical data use only
+
+2026-10-5:
+
+Performed first test on model (Note: may be overgeneralizing due to overly infrequent precipitation events)
