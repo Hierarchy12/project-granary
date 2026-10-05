@@ -61,7 +61,7 @@ if resp_main.status_code == 200 and resp_near.status_code == 200:
     data_near = resp_near.json()
     len_main = len(data_main["observations"])
     len_near = len(data_near["observations"])
-
+    
     for i in range(len_main):
         # Add new row to the dataframe with most data from the main station and pressure data from the nearby station
         df.loc[len(df), "date"] = data_main["observations"][i]["obsTimeUtc"]
@@ -73,6 +73,7 @@ if resp_main.status_code == 200 and resp_near.status_code == 200:
         df.loc[len(df) - 1, "wind_direction_10m"] = data_main["observations"][i]["winddirAvg"]
         df.loc[len(df) - 1, "wind_gusts_10m"] = data_main["observations"][i]["imperial"]["windgustHigh"]
         df.loc[len(df) - 1, "precipitation_probability"] = 0.0
+        df.loc[len(df) - 1, "precipitation"] = data_main["observations"][i]["imperial"]["precipRate"]
 
     # Round the date column to the nearest hour and drop duplicates
     df['date'] = df['date'].dt.round('h')

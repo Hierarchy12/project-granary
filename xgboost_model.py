@@ -15,7 +15,7 @@ forecast_index = pd.date_range(start=pd.to_datetime(df.iat[-1, 0]) + pd.Timedelt
 forecast_df = pd.DataFrame({'forecast': [df.iloc[len(df) - 1]['precipitation_probability']] + [None] * (len(forecast_index) - 1)}, index=forecast_index)
 
 # Set up dataset variables
-def granary_split(df, test_size=0.2, threshold=5.0, forecast_hour=1):
+def granary_split(df, test_size=0.2, threshold=0.0, forecast_hour=1):
     x_train = pd.DataFrame(columns = [
         'temp_1','temp_2','temp_3','temp_4','temp_5','temp_6',
         'humidity_1','humidity_2','humidity_3','humidity_4','humidity_5','humidity_6',
@@ -46,16 +46,16 @@ def granary_split(df, test_size=0.2, threshold=5.0, forecast_hour=1):
             new_row.append(df.iloc[i + j]['wind_speed_10m'])
             new_row.append(df.iloc[i + j]['wind_direction_10m'])
             new_row.append(df.iloc[i + j]['wind_gusts_10m'])
-            new_row.append(df.iloc[i + j]['precipitation_probability'])
+            new_row.append(df.iloc[i + j]['precipitation'])
         if random() < test_size:
             x_test.loc[len(x_test)] = new_row
-            if df.iloc[i + 5 + forecast_hour]['precipitation_probability'] >= threshold:
+            if df.iloc[i + 5 + forecast_hour]['precipitation'] > threshold:
                 y_test.loc[len(y_test)] = 1
             else:
                 y_test.loc[len(y_test)] = 0
         else:
             x_train.loc[len(x_train)] = new_row
-            if df.iloc[i + 5 + forecast_hour]['precipitation_probability'] >= threshold:
+            if df.iloc[i + 5 + forecast_hour]['precipitation'] > threshold:
                 y_train.loc[len(y_train)] = 1
             else:
                 y_train.loc[len(y_train)] = 0
@@ -81,7 +81,7 @@ def current_conditions(df):
         new_row.append(df.iloc[len(df) - 6 + j]['wind_speed_10m'])
         new_row.append(df.iloc[len(df) - 6 + j]['wind_direction_10m'])
         new_row.append(df.iloc[len(df) - 6 + j]['wind_gusts_10m'])
-        new_row.append(df.iloc[len(df) - 6 + j]['precipitation_probability'])
+        new_row.append(df.iloc[len(df) - 6 + j]['precipitation'])
     return new_row
 
 
@@ -89,7 +89,7 @@ def current_conditions(df):
 current_obs = current_conditions(df.drop(columns=['date']))
 
 for i in range(1, fs + 1):
-    X_train, X_test, y_train, y_test = granary_split(df.drop(columns=['date']), test_size=0.2, threshold=5.0, forecast_hour=i)
+    X_train, X_test, y_train, y_test = granary_split(df.drop(columns=['date']), test_size=0.2, threshold=0.0, forecast_hour=i)
     bst = XGBClassifier(n_estimators=2, eval_metric='mlogloss', max_depth=6, learning_rate=1, objective='binary:logistic')
 
     bst.fit(X_train, y_train)
@@ -98,7 +98,7 @@ for i in range(1, fs + 1):
     forecast_dt = dt + datetime.timedelta(hours=i)
 
     accuracy = accuracy_score(y_test, preds)
-    print(f"For forecast hour {i} ({forecast_dt}):")
+    print(f"\nFor forecast hour {i} ({forecast_dt}):")
     print("Detailed Classification Report:")
     print(classification_report(y_test, preds, zero_division=1))
     print(f"Model Accuracy: {accuracy * 100:.2f}%")
