@@ -83,6 +83,6 @@ Updated XGBoost model for matplotlib support and moving prediction to precipitat
 
 Successfully moved prediction to observed participation, using Open-Meteo for historical data use only
 
-2026-10-5:
+2026-10-5 - 10-25:
 
 Performed first test on model (Note: may be overgeneralizing due to overly infrequent precipitation events)
