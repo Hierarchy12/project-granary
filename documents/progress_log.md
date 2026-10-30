@@ -86,3 +86,7 @@ Successfully moved prediction to observed participation, using Open-Meteo for hi
 2026-10-5 - 10-25:
 
 Performed first test on model (Note: may be overgeneralizing due to overly infrequent precipitation events)
+
+2026-10-26 - 10-29:
+
+Testing model frequently
