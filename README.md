@@ -11,7 +11,7 @@ Sainlogic weather station purchased and en route
 Imported historical baseline data from Open-Meteo
 Experimental dataset implementation with matplotlib, pandas, and numpy
 
-Parts of this code are attributed to geeksforgeeks.org, most of the historical data was supplied by Open-Meteo weather API, and the weather station data supply is hosted by Weather Underground.
+Parts of this code are attributed to geeksforgeeks.org, most of the historical data was supplied by Open-Meteo weather API, the weather station data supply is hosted by Weather Underground, and the model's predictions are tested against forecasts supplied by Open-Meteo and the National Weather Service.
 
 Roadmap:
 Developing a machine learning model to improve prediction of hyperlocal weather conditions by training it using historical data from external sources and current data from a personal weather station
